@@ -1,0 +1,11 @@
+C:\Users\ksawe\OneDrive\Dokumenty\Uni\SS2026\CD\Final_project_CC241042_Ksawery_Kochanowicz\DataStructureLibrary\bin\Debug\net10.0\DataStructureLibrary.deps.json
+C:\Users\ksawe\OneDrive\Dokumenty\Uni\SS2026\CD\Final_project_CC241042_Ksawery_Kochanowicz\DataStructureLibrary\bin\Debug\net10.0\DataStructureLibrary.dll
+C:\Users\ksawe\OneDrive\Dokumenty\Uni\SS2026\CD\Final_project_CC241042_Ksawery_Kochanowicz\DataStructureLibrary\bin\Debug\net10.0\DataStructureLibrary.pdb
+C:\Users\ksawe\OneDrive\Dokumenty\Uni\SS2026\CD\Final_project_CC241042_Ksawery_Kochanowicz\DataStructureLibrary\obj\Debug\net10.0\DataStructureLibrary.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ksawe\OneDrive\Dokumenty\Uni\SS2026\CD\Final_project_CC241042_Ksawery_Kochanowicz\DataStructureLibrary\obj\Debug\net10.0\DataStructureLibrary.AssemblyInfoInputs.cache
+C:\Users\ksawe\OneDrive\Dokumenty\Uni\SS2026\CD\Final_project_CC241042_Ksawery_Kochanowicz\DataStructureLibrary\obj\Debug\net10.0\DataStructureLibrary.AssemblyInfo.cs
+C:\Users\ksawe\OneDrive\Dokumenty\Uni\SS2026\CD\Final_project_CC241042_Ksawery_Kochanowicz\DataStructureLibrary\obj\Debug\net10.0\DataStructureLibrary.csproj.CoreCompileInputs.cache
+C:\Users\ksawe\OneDrive\Dokumenty\Uni\SS2026\CD\Final_project_CC241042_Ksawery_Kochanowicz\DataStructureLibrary\obj\Debug\net10.0\DataStructureLibrary.dll
+C:\Users\ksawe\OneDrive\Dokumenty\Uni\SS2026\CD\Final_project_CC241042_Ksawery_Kochanowicz\DataStructureLibrary\obj\Debug\net10.0\refint\DataStructureLibrary.dll
+C:\Users\ksawe\OneDrive\Dokumenty\Uni\SS2026\CD\Final_project_CC241042_Ksawery_Kochanowicz\DataStructureLibrary\obj\Debug\net10.0\DataStructureLibrary.pdb
+C:\Users\ksawe\OneDrive\Dokumenty\Uni\SS2026\CD\Final_project_CC241042_Ksawery_Kochanowicz\DataStructureLibrary\obj\Debug\net10.0\ref\DataStructureLibrary.dll

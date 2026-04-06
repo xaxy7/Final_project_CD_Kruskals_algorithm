@@ -16,3 +16,4 @@ C:\Users\ksawe\OneDrive\Dokumenty\Uni\SS2026\CD\Final_project_CC241042_Ksawery_K
 C:\Users\ksawe\OneDrive\Dokumenty\Uni\SS2026\CD\Final_project_CC241042_Ksawery_Kochanowicz\kruskalscomputation\obj\Debug\net10.0\kruskalscomputation.pdb
 C:\Users\ksawe\OneDrive\Dokumenty\Uni\SS2026\CD\Final_project_CC241042_Ksawery_Kochanowicz\kruskalscomputation\obj\Debug\net10.0\kruskalscomputation.genruntimeconfig.cache
 C:\Users\ksawe\OneDrive\Dokumenty\Uni\SS2026\CD\Final_project_CC241042_Ksawery_Kochanowicz\kruskalscomputation\obj\Debug\net10.0\ref\kruskalscomputation.dll
+C:\Users\ksawe\OneDrive\Dokumenty\Uni\SS2026\CD\Final_project_CC241042_Ksawery_Kochanowicz\kruskalscomputation\obj\Debug\net10.0\kruskalscomputation.sourcelink.json

@@ -1,17 +1,13 @@
 ﻿namespace kruskalscomputation;
 
-using System.ComponentModel;
-using System.Diagnostics;
-using System.Runtime.CompilerServices;
-using System.Security.Cryptography.X509Certificates;
 using DataStructureLibrary.Graph;
 using kruskalscomputation.properties;
-using Microsoft.VisualBasic;
+using static kruskalscomputation.KruskalsDefault;
 
 class Program
 {
-    static Dictionary<Vertex<VertexProperty>, Vertex<VertexProperty>> parent = new  Dictionary<Vertex<VertexProperty>, Vertex<VertexProperty>>();
-    static List<Edge<Vertex<VertexProperty>,EdgeProperty>> mstEdges = new();
+
+    private static List<Edge<Vertex<VertexProperty>, EdgeProperty>> mstEdges = new();
     static void Main(string[] args)
     {
         Graph<VertexProperty, EdgeProperty> graph = new Graph<VertexProperty, EdgeProperty>();
@@ -42,46 +38,21 @@ class Program
         e5.Property.Weight = 6;
         edgesList.Add(e5);
 
-        edgesList = edgesList
-            .OrderBy(e => e.Property.Weight)
-            .ToList();
-        
+        mstEdges = RunKruskal(graph, edgesList);
 
-
-        foreach(Vertex<VertexProperty> v in graph.GetVertices())
-        {
-            parent[v] = v;
-        }
-
-
-        foreach(Edge<Vertex<VertexProperty>, EdgeProperty> edge in edgesList)
-        {
-           Vertex<VertexProperty> source = edge.Property.Source!;
-           Vertex<VertexProperty> target = edge.Property.Target!;
-
-            if(Find(source) != Find(target))
-            {
-                mstEdges.Add(edge);
-                Union(source,target);
-            }
-            if(mstEdges.Count == graph.GetVertices().Count() - 1)
-            {
-                break;
-            }
-        }
-        PrintEdges();
-        PrintMSTWeight();
+        PrintEdges(mstEdges);
+        PrintMSTWeight(mstEdges);
 
 
     }
-    static void PrintEdges()
+    static void PrintEdges(List<Edge<Vertex<VertexProperty>, EdgeProperty>> mstEdges)
     {
         foreach(Edge<Vertex<VertexProperty>, EdgeProperty> edge in mstEdges)
         {
             Console.WriteLine($"Source: {edge.Property.Source}, Target: {edge.Property.Target}, Weight: {edge.Property.Weight}" );
         }
     }
-    static void PrintMSTWeight()
+    static void PrintMSTWeight(List<Edge<Vertex<VertexProperty>, EdgeProperty>> mstEdges)
     {
         int totalWeight = 0;
         foreach(Edge<Vertex<VertexProperty>, EdgeProperty> edge in mstEdges)
@@ -90,28 +61,7 @@ class Program
         }
         Console.WriteLine($"Total Minimal Spanning Tree Weight: {totalWeight}");
     }
-    static Vertex<VertexProperty> Find(Vertex<VertexProperty> v)
-    {
-        if (!parent.ContainsKey(v))
-            throw new Exception("Vertex not found in disjoint set");
-        while(parent[v] != v)
-        {
-            v = parent[v];
-        }
 
-        return v;
-
-    }
-    static void Union(Vertex<VertexProperty> a, Vertex<VertexProperty> b)
-    {
-        Vertex<VertexProperty> rootA = Find(a);
-        Vertex<VertexProperty> rootB = Find(b);
-
-        if(rootA != rootB)
-        {
-            parent[rootA] = rootB;
-        }
-    }
 
 
 }

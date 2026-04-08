@@ -11,4 +11,8 @@
     <ProjectReference Include="..\DataStructureLibrary\DataStructureLibrary.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <PackageReference Include="ScottPlot" Version="5.1.58" />
+  </ItemGroup>
+
 </Project>

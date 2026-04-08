@@ -1,7 +1,7 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ksawe\\OneDrive\\Dokumenty\\Uni\\SS2026\\CD\\Final_project_CC241042_Ksawery_Kochanowicz\\kruskalscomputation\\kruskalscomputation.csproj": {}
+    "C:\\Users\\ksawe\\OneDrive\\Dokumenty\\Uni\\SS2026\\CD\\Final_project_CC241042_Ksawery_Kochanowicz\\KruskalsComputation\\kruskalscomputation.csproj": {}
   },
   "projects": {
     "C:\\Users\\ksawe\\OneDrive\\Dokumenty\\Uni\\SS2026\\CD\\Final_project_CC241042_Ksawery_Kochanowicz\\DataStructureLibrary\\DataStructureLibrary.csproj": {
@@ -337,14 +337,14 @@
         }
       }
     },
-    "C:\\Users\\ksawe\\OneDrive\\Dokumenty\\Uni\\SS2026\\CD\\Final_project_CC241042_Ksawery_Kochanowicz\\kruskalscomputation\\kruskalscomputation.csproj": {
+    "C:\\Users\\ksawe\\OneDrive\\Dokumenty\\Uni\\SS2026\\CD\\Final_project_CC241042_Ksawery_Kochanowicz\\KruskalsComputation\\kruskalscomputation.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ksawe\\OneDrive\\Dokumenty\\Uni\\SS2026\\CD\\Final_project_CC241042_Ksawery_Kochanowicz\\kruskalscomputation\\kruskalscomputation.csproj",
+        "projectUniqueName": "C:\\Users\\ksawe\\OneDrive\\Dokumenty\\Uni\\SS2026\\CD\\Final_project_CC241042_Ksawery_Kochanowicz\\KruskalsComputation\\kruskalscomputation.csproj",
         "projectName": "kruskalscomputation",
-        "projectPath": "C:\\Users\\ksawe\\OneDrive\\Dokumenty\\Uni\\SS2026\\CD\\Final_project_CC241042_Ksawery_Kochanowicz\\kruskalscomputation\\kruskalscomputation.csproj",
+        "projectPath": "C:\\Users\\ksawe\\OneDrive\\Dokumenty\\Uni\\SS2026\\CD\\Final_project_CC241042_Ksawery_Kochanowicz\\KruskalsComputation\\kruskalscomputation.csproj",
         "packagesPath": "C:\\Users\\ksawe\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ksawe\\OneDrive\\Dokumenty\\Uni\\SS2026\\CD\\Final_project_CC241042_Ksawery_Kochanowicz\\kruskalscomputation\\obj\\",
+        "outputPath": "C:\\Users\\ksawe\\OneDrive\\Dokumenty\\Uni\\SS2026\\CD\\Final_project_CC241042_Ksawery_Kochanowicz\\KruskalsComputation\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\ksawe\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -380,6 +380,12 @@
       "frameworks": {
         "net10.0": {
           "targetAlias": "net10.0",
+          "dependencies": {
+            "ScottPlot": {
+              "target": "Package",
+              "version": "[5.1.58, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

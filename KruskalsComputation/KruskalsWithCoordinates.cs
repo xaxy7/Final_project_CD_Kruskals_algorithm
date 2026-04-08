@@ -87,11 +87,11 @@ static class KruskalsWithCoordinates
     private static void Union(Vertex<CoordinatesVertexProperty> a, Vertex<CoordinatesVertexProperty> b, Dictionary<Vertex<CoordinatesVertexProperty>, Vertex<CoordinatesVertexProperty>> parent)
     {
         Vertex<CoordinatesVertexProperty> rootA = Find(a, parent);
-        Vertex<CoordinatesVertexProperty> roottarget = Find(b, parent);
+        Vertex<CoordinatesVertexProperty> rootB = Find(b, parent);
 
-        if (rootA != roottarget)
+        if (rootA != rootB)
         {
-            parent[rootA] = roottarget;
+            parent[rootA] = rootB;
         }
     }
 

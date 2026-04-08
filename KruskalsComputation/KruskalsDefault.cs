@@ -9,7 +9,7 @@ using kruskalscomputation.properties;
 static class KruskalsDefault
 {
 
-    public static List<Edge<Vertex<VertexProperty>, EdgeProperty>> RunKruskal(Graph<VertexProperty, EdgeProperty> graph, List<Edge<Vertex<VertexProperty>, EdgeProperty>> edgesList)
+    public static List<Edge<Vertex<VertexProperty>, EdgeProperty>> RunKruskalsDefualt(Graph<VertexProperty, EdgeProperty> graph, List<Edge<Vertex<VertexProperty>, EdgeProperty>> edgesList)
     {
         List<Edge<Vertex<VertexProperty>, EdgeProperty>> mstEdges = new List<Edge<Vertex<VertexProperty>, EdgeProperty>>();
 

@@ -2,13 +2,14 @@
 using DataStructureLibrary.Graph;
 using kruskalscomputation.properties;
 
+
 namespace kruskalscomputation;
 
 
 static class KruskalsWithCoordinates
 {
     
-    public static List<Edge<Vertex<CoordinatesVertexProperty>,CoordinatesEdgeProperty>> RunKruskalsWithCoordinates(List<Vertex<CoordinatesVertexProperty>> vertices)
+    public static CoordinateKruskalsResult RunKruskalsWithCoordinates(List<Vertex<CoordinatesVertexProperty>> vertices)
     {
         Graph<CoordinatesVertexProperty, CoordinatesEdgeProperty> graph = new Graph<CoordinatesVertexProperty, CoordinatesEdgeProperty>();
 
@@ -42,7 +43,13 @@ static class KruskalsWithCoordinates
                 break;
             }
         }
-        return mstEdges;       
+        CoordinateKruskalsResult result = new CoordinateKruskalsResult();
+        result.AllEdges = edgesList;
+        result.MstEdges = mstEdges;
+
+        return result;
+
+
     }
 
 

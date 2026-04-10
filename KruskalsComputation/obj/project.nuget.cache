@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "GI+fR91ttCY=",
+  "dgSpecHash": "WP+AN/TjqqI=",
   "success": true,
-  "projectFilePath": "C:\\Users\\ksawe\\OneDrive\\Dokumenty\\Uni\\SS2026\\CD\\Final_project_CC241042_Ksawery_Kochanowicz\\KruskalsComputation\\kruskalscomputation.csproj",
+  "projectFilePath": "C:\\Users\\ksawe\\OneDrive\\Dokumenty\\Uni\\SS2026\\CD\\Final_project_CC241042_Ksawery_Kochanowicz\\kruskalscomputation\\kruskalscomputation.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ksawe\\.nuget\\packages\\harfbuzzsharp\\8.3.1.1\\harfbuzzsharp.8.3.1.1.nupkg.sha512",
     "C:\\Users\\ksawe\\.nuget\\packages\\harfbuzzsharp.nativeassets.linux\\8.3.1.1\\harfbuzzsharp.nativeassets.linux.8.3.1.1.nupkg.sha512",

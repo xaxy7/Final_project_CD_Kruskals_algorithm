@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("kruskalscomputation")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9b554ddaec9147a6baef7fa3968ca9c73604a8a2")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b0906409eb7901a1e79994b7d99fad8974f2a322")]
 [assembly: System.Reflection.AssemblyProductAttribute("kruskalscomputation")]
 [assembly: System.Reflection.AssemblyTitleAttribute("kruskalscomputation")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

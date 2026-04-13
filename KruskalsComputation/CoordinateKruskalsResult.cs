@@ -3,7 +3,7 @@ using kruskalscomputation.properties;
 
 namespace kruskalscomputation;
 
-
+//helper class that allows the KruskalsWithCoordinates to return both AllEdges and MstEdges
 public class CoordinateKruskalsResult
 {
     public List<Edge<Vertex<CoordinatesVertexProperty>, CoordinatesEdgeProperty>> AllEdges { get; set; }

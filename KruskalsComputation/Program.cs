@@ -1,5 +1,6 @@
 ﻿namespace kruskalscomputation;
 
+using System.Diagnostics;
 using System.Globalization;
 using DataStructureLibrary.Graph;
 using kruskalscomputation.properties;
@@ -11,6 +12,7 @@ class Program
 
     static void Main(string[] args)
     {
+        // mode selection for "dotnet run -- KruskalsDefault / KruskalsWithCoordinates"
         if (args.Length > 0)
         {
             string mode = args[0];
@@ -31,7 +33,7 @@ class Program
                 return;
             }
         }
-
+        // Mode selection for just "dotnet run"
         Console.WriteLine("Choose algorithm:");
         Console.WriteLine("1 - KruskalsDefault");
         Console.WriteLine("2 - KruskalsWithCoordinates");
@@ -52,6 +54,7 @@ class Program
         }
     }
 
+// Function that displays and process the menu for the default Kruskals Solution
     static void RunDefaultMode()
     {
         Console.WriteLine("Choose default input type:");
@@ -63,6 +66,7 @@ class Program
         Graph<VertexProperty, EdgeProperty> graph;
         List<Edge<Vertex<VertexProperty>, EdgeProperty>> edgesList;
 
+        //Menu with choices of either random input or manual one
         if (choice == "0")
         {
             GenerateRandomDefaultInput(out graph, out edgesList);
@@ -78,12 +82,13 @@ class Program
         }
 
         List<Edge<Vertex<VertexProperty>, EdgeProperty>> mstEdges =
-            RunKruskalsDefualt(graph, edgesList);
+            RunKruskalsDefault(graph, edgesList);
 
+        Console.WriteLine("List of Edges in the minimum spanning tree: ");
         PrintEdgesDefault(mstEdges);
         PrintMSTWeightDefault(mstEdges);
     }
-
+// Function that displays and process the menu for the Kruskals Algorithm solution but Euclidean / with coordinates
     static void RunCoordinateMode()
     {
         Console.WriteLine("Choose coordinate input type:");
@@ -95,7 +100,7 @@ class Program
         string inputChoice = Console.ReadLine()!;
 
         List<Vertex<CoordinatesVertexProperty>> vertices;
-
+        // mode selection: random input, manual input long (with name choices for vertices), manual input short (auto generated names)
         if(inputChoice == "0")
         {
             vertices = GenerateRandomCoordinateInput();
@@ -116,14 +121,17 @@ class Program
 
         CoordinateKruskalsResult result = KruskalsWithCoordinates.RunKruskalsWithCoordinates(vertices);
 
+        Console.WriteLine("List of edges in the minimum spanning tree: ");
         PrintEdgesCoordinates(result.MstEdges);
         PrintMSTLengthCoordinates(result.MstEdges);
         CoordinateGraphRendered.DrawGraph(vertices,result.AllEdges ,result.MstEdges);
     }    
+
+    //function that generates random vertices for the coordinates solution
     static List<Vertex<CoordinatesVertexProperty>> GenerateRandomCoordinateInput()
     {
         Random rand = new Random();
-        int count = rand.Next(4,8);
+        int count = rand.Next(4,8); // decides random amount of vertices 
 
         List<Vertex<CoordinatesVertexProperty>> vertices = new List<Vertex<CoordinatesVertexProperty>>();
 
@@ -136,9 +144,17 @@ class Program
 
             vertices.Add(v);
         }
+        Console.WriteLine("List of randomly generated vertices:");
+        for(int i = 0; i < vertices.Count; i++)
+        {
+            var vertex = vertices[i];
+
+            Console.WriteLine($"Name: {vertex.Property.Name} Coordinates: X: {vertex.Property.X} Y: {vertex.Property.Y}");
+        }
         return vertices;
     }
-    
+   
+    //function that generates random vertices for the default solution
     static void GenerateRandomDefaultInput(out Graph<VertexProperty, EdgeProperty> graph, out List<Edge<Vertex<VertexProperty>,EdgeProperty>> edgesList)
     {
         graph = new Graph<VertexProperty, EdgeProperty>();
@@ -146,7 +162,7 @@ class Program
 
         Random rand = new Random();
 
-        int vCount = rand.Next(4,8);
+        int vCount = rand.Next(4,8); // decides random amount of vertices 
 
         List<Vertex<VertexProperty>> vertices = new List<Vertex<VertexProperty>>();
 
@@ -155,7 +171,7 @@ class Program
             Vertex<VertexProperty> v = graph.AddVertex($"V{i+1}");
             vertices.Add(v);
         }
-        // ensure connectivity (chain)
+        //this for loop ensures connectivity so that every edge has a weight
         for (int i = 0; i < vCount - 1; i++)
         {
             Edge<Vertex<VertexProperty>, EdgeProperty> edge =
@@ -182,10 +198,19 @@ class Program
                 edge.Property.Weight = rand.Next(1, 20);
                 edgesList.Add(edge);
             }
-        }       
-
+        } 
+        //print the edges for debugging:
+        Console.WriteLine("List of randomly generated edges:");
+        for(int i = 0; i < edgesList.Count; i++)
+        {
+            var edge = edgesList[i];
+  
+            Console.WriteLine($"Source: {edge.Property.Source!.Property.Name} Target: {edge.Property.Target!.Property.Name} Weight: {edge.Property.Weight}");
+        
+        }              
     }
     
+    //function that reads the default manual input
     static void ReadDefaultInput(out Graph<VertexProperty, EdgeProperty> graph, out List<Edge<Vertex<VertexProperty>,EdgeProperty>> edgesList)
     {
         graph = new Graph<VertexProperty, EdgeProperty>();
@@ -227,9 +252,10 @@ class Program
             edge.Property.Weight = weight;
 
             edgesList.Add(edge);
-        }   
+        }
     }
 
+// function that reads the vertices from long manual input for the coordinate solution
     static List<Vertex<CoordinatesVertexProperty>> ReadVerticesFromInput()
     {
         List<Vertex<CoordinatesVertexProperty>> vertices = new List<Vertex<CoordinatesVertexProperty>>();
@@ -285,7 +311,7 @@ class Program
         return vertices;
     }
 
-
+//function that reads the vertices from short manual input for coordinate solution
     static List<Vertex<CoordinatesVertexProperty>> ReadVerticesFromShortInput()
     {
         Console.WriteLine("Enter: N X1 Y1 X2 Y2 ... XN YN");

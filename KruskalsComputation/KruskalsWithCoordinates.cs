@@ -79,8 +79,6 @@ static class KruskalsWithCoordinates
   
                 edges.Add(edge);
                 
-
-
             }
         }
         

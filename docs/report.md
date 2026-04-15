@@ -22,6 +22,8 @@ In order to implement the Kruskal's MST algorithm, I had to personalize the DS L
 In `Graph.cs`:
 - I added `GetVertices()` method that just returns the vertices which are part of the graph
 
+### Class diagram:
+![class diagram](class_diagram.png)
 
 ### Assigning weight to edges:
 In case of the default solution, each edge has an arbitrary weight assigned. In the coordinate solution the weight of each edge is calculated by measuring the Euclidean distance between two vertices.
@@ -38,7 +40,7 @@ Initially, the function picks the smallest edge from edgesList. Then, using the 
 The break condition for this loop is if the amount of edges in the MST is smaller by one than the amount of total vertices in the graph.
 
 ### Final Result:
-When the foreach loop is finished, the edges that create the Minimal Spanning Tree are returned. 
+When the foreach loop is finished, the edges that create the Minimum Spanning Tree are returned. 
 
 ## Additional Features
 
@@ -66,11 +68,11 @@ Then the plot is saved to a png and stored in `generated_graphs` directory.
 ### Choosing the idea:
 I had a few ideas for the practical application, all of them sharing the same concept: using 2d coordinates and actually edge lengths, instead of arbitrary ones. Ultimately I decided to choose and idea I found interesting while researching the algorithm on the Internet
 ### The idea:
-Let's assume that each vertex represent an island, with the X and Y being the coordinates. All of the vertices together create an archipelago. We want to build a bridge system, in a way that each island has access to each other island. However, in order to preserve building materials, time and money, we want to find a way to connect the island so that there is no cycles. And that's when the Minimal Spanning Tree comes in. The generated 2d graph displays the optimal way of connecting all of the islands, and a total cost in length is calculated
+Let's assume that each vertex represent an island, with the X and Y being the coordinates. All of the vertices together create an archipelago. We want to build a bridge system, in a way that each island has access to each other island. However, in order to preserve building materials, time and money, we want to find a way to connect the island so that there is no cycles. And that's when the Minimum Spanning Tree comes in. The generated 2d graph displays the optimal way of connecting all of the islands, and a total cost in length is calculated
 ### Constrains
 In real life, there are more variables that would have to be considered while choosing the most cost efficient build process such as: water depth, land elevation, importance of each island, shipping paths etc. However, to simplify the problem I assumed the cost is the euclidean distance between each island.
 
-If we want to use real life location some islands, there are a few downsides caused by the simplicity of the solution. X will represent the longitude, Y the latitude. However, because of curvature of the Earth, the bigger the distance, the bigger is the distortion. Because of that, the application works the best if we consider it as map projection, and we use islands relatively close to each other. In any way, the graph should be considered as approximation of real data.
+If we want to use real life location some islands, there are a few downsides caused by the simplicity of the solution. X will represent the longitude, Y the latitude. However, because of curvature of the Earth, the bigger the distance, the bigger is the distortion. Because of that, the application works the best if we consider it as map projection, and we use islands relatively close to each other. Additionally, it consider's an island as a single vertex, not a large area. In any way, the graph should be considered as approximation of real data.
 
 ### Usage
 In order to demonstrate the capabilities of the practical application, we can use real life location, taking into a count the constrains. As an example, I chose 7 islands from the Caribbean Sea. We can use the Kruskal's Coordinate solution, choosing Long Manual Input to insert the data in the terminal.
@@ -96,17 +98,17 @@ Source: Cuba, Target: Bahamas, Length: 3,5335257548233634
 Source: DominicanRepublic, Target: PuertoRico, Length: 3,6095142013849952
 Source: Jamaica, Target: Haiti, Length: 5,085814177690723
 Source: PuertoRico, Target: Barbados, Length: 8,65612634034417
-Total Minimal Spanning Tree Length: 26,466818530502888
+Total Minimum Spanning Tree Length: 26,466818530502888
 ```
 And the generated graph looks like:
 ![example_graph](example_graph.png)
 
 ## Discussion/Conclusion
-Initially, it was a challenge to me to understand how exactly does the algorithm calculate the Minimal Spanning Tree. The visualization on the wikipedia page helped a lot, but didn't really make it clear what should the algorithm look in code. I had to research the topic, finally discovering to use a dictionary as a disjoint set. Realizing that the algorithm is quite simple when knowing what data structure to use was a relief. During this research I started to like the project a lot. However, I wasn't a fan of the fact that the values are arbitrary, so from the start I knew I want to implement a solution that uses 2D coordinates.
+Initially, it was a challenge to me to understand how exactly does the algorithm calculate the Minimum Spanning Tree. The visualization on the wikipedia page helped a lot, but didn't really make it clear what should the algorithm look in code. I had to research the topic, finally discovering to use a dictionary as a disjoint set. Realizing that the algorithm is quite simple when knowing what data structure to use was a relief. During this research I started to like the project a lot. However, I wasn't a fan of the fact that the values are arbitrary, so from the start I knew I want to implement a solution that uses 2D coordinates.
 
 Another challenge was properly understanding the DataStructureLibrary, and how to extend it to fit my project. However, reviewing the code carefully and coming back to videos from previous lectures allowed me to understand how it works, and properly tune it to my project
 
-Overall, I enjoyed the project a lot, especially the freedom I've got to implement a practical solution of my choosing. Working on the implementation required me to do plenty of additional research, which I feel like improved my knowledge a lot, and also got me hooked on researching different graph traversal algorithms.
+Overall, I enjoyed the project a lot, especially the freedom I've got to implement a practical solution of my choosing. Working on the implementation required me to do plenty of additional research, which I feel like improved my knowledge a lot, and also got me hooked on researching different graph traversal algorithms.verall, I enjoyed the project a lot, especially the freedom I've got to implement a practical solution of my choosing. Working on the implementation required me to do plenty of additional research, which I feel like improved my knowledge a lot, and also got me hooked on researching different graph traversal algorithms.
 
 ## Work with: 
 I worked alone

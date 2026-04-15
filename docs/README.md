@@ -25,7 +25,7 @@ dotnet run
 ```
 ### Usage
 
-```dotnet run``` opens a menu where you can choose the mode for the calculations of the Minimal Spanning Tree
+```dotnet run``` opens a menu where you can choose the mode for the calculations of the Minimum Spanning Tree
 - Kruskal's Default
 - Kruskal's With Coordinates
 
@@ -49,7 +49,7 @@ This solution offers 3 input modes:
 2. Short Manual Input (auto generates names for vertices, needing only the coordinates)
     - Short Input (N X1 Y1 X2 Y2 ... XN YN) format
 
-The output is also a list of edges (with their source, target and length). It also displays the minimal spanning tree length. On top of that, a graph is generated of the MST, and saved in the ```generated_graphs``` directory.
+The output is also a list of edges (with their source, target and length). It also displays the minimum spanning tree length. On top of that, a graph is generated of the MST, and saved in the ```generated_graphs``` directory.
 
 ## Roadmap 
 1. MST solution using Kruskal's algorithm with default settings

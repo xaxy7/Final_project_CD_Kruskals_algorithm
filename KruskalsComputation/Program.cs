@@ -374,7 +374,7 @@ class Program
         {
             totalWeight += edge.Property.Weight;
         }
-        Console.WriteLine($"Total Minimal Spanning Tree Weight: {totalWeight}");
+        Console.WriteLine($"Total Minimum Spanning Tree Weight: {totalWeight}");
     }
     static void PrintMSTLengthCoordinates(List<Edge<Vertex<CoordinatesVertexProperty>, CoordinatesEdgeProperty>> mstEdges)
     {
@@ -383,7 +383,7 @@ class Program
         {
             totalLength += edge.Property.Length;
         }
-        Console.WriteLine($"Total Minimal Spanning Tree Length: {totalLength}");
+        Console.WriteLine($"Total Minimum Spanning Tree Length: {totalLength}");
     }
 
 

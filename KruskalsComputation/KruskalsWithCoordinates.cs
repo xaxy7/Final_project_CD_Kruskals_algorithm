@@ -8,7 +8,7 @@ namespace kruskalscomputation;
 
 static class KruskalsWithCoordinates
 {
-    // solution for the Minimal Spanning Tree in Euclidean space using Kruskal's algorithm
+    // solution for the Minimum Spanning Tree in Euclidean space using Kruskal's algorithm
     public static CoordinateKruskalsResult RunKruskalsWithCoordinates(List<Vertex<CoordinatesVertexProperty>> vertices)
     {
         Graph<CoordinatesVertexProperty, CoordinatesEdgeProperty> graph = new Graph<CoordinatesVertexProperty, CoordinatesEdgeProperty>();
